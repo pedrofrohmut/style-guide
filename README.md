@@ -1,2 +1,1 @@
-# style-guide
-Style Guide Bootstrap for React Dev
+# Style Guide for JavaScript ESlint + Prettier + EditorConfig
