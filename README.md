@@ -2,10 +2,10 @@
 
  Style Guide for React
 
- Convenção de regras para facilitar a conversação entre os desenvolvedores detro
-de um mesmo projeto.
+ A set of rules to facilitate the communication between the developer of an react
+app.
 
-Prettier para automatizar a aplicação destas regras ao codigo escrito.
+Prettier (extension) to automate the process.
 
 Passos:
 
@@ -17,25 +17,28 @@ Passos:
 
 4 - $ npx eslint --init
 
-5 - choose eslint options:
-
-  - Would you like to configure ESLINT? Use a popular style guide
+5 - Choose eslint options:
+  - How would you like to use ESLint? To check syntax, find problems and enforce
+  code style
+  - What types of modules your project use? JavaScript Modules (import/esport)
+  - Which Framework does your project use? React
+  - Where does your code run? browser
+  - Would you like to configure ESLint? Use a popular style guide
   - Which style guide to follow? Airbnb
-  - use react? Yes
   - What format do config file? JSON
   - Whould you like to install dependencies? Yes
 
-6 - Add plugins: [Eslint, Prettier, editorconfig]
+6 - Add plugins to your editor: [Eslint, Prettier, editorconfig]
 
-7? - Edit .eslintrc.json
-  - Add what you want to subscribe on the default from Airbnb
+7? - Edit ESLint config file .eslintrc.json
+  - Add what you want to overwrite from the default from Airbnb
 
-8 - Set options:
+8 - Set Editor options:
   - editor.formatOnSave: true
   - prettier.eslintIntegration: true
 
 9 - Create and edit .editorconfig on the project root
 
-10 - Enable the plugins and check for errors
+10 - Enable the plugins, eslint and prettier, and check for errors
 
-11 - Clean Up react app default errors and the project is ready to go
+11 - Clean Up the default react app errors and the project is ready to go
