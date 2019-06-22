@@ -36,8 +36,21 @@ Passos:
 8 - Set Editor options:
   - editor.formatOnSave: true
   - prettier.eslintIntegration: true
+  
+  * Optional settings:
+  "prettier.endOfLine": "lf"
+  "prettier.printWidth": 80
+  "prettier.semi": false
+  "eslint.autoFixOnSave": true
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "language": "javascript", "autoFix": true },
+    { "language": "javascriptreact", "autoFix": true }
+  ]
+  "files.trimTrailingWhitespace": true
 
-9 - Create and edit .editorconfig on the project root
+9 - Create and edit .editorconfig on the project root (example at this repo rootDir)
 
 10 - Enable the plugins, eslint and prettier, and check for errors
 
