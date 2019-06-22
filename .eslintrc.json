@@ -18,6 +18,8 @@
     "sourceType": "module"
   },
   "rules": {
+    "semi": ["error", "never"],
+    "quotes":  ["error", "double", { "avoidEscape": true }],
     "react/jsx-filename-extension": [
       "error",
       {
