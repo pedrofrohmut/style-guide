@@ -26,7 +26,25 @@ Passos:
   - Would you like to configure ESLint? Use a popular style guide
   - Which style guide to follow? Airbnb
   - What format do config file? JSON
-  - Whould you like to install dependencies? Yes
+  - Whould you like to install dependencies? Yes (if you are using NPM) No (if not)
+
+  5.1(optional) If you are not using, yarn for example:
+    
+    You may add prettier as a dev dependency so it can run in other editors without the editor
+    plugin dependency.
+
+    Yarn add --dev
+	
+    ESLINT
+      eslint-plugin-react
+      eslint-plugin-react-hooks (if you are using hooks)
+      eslint-config-airbnb
+      eslint-plugin-jsx-a11y
+      eslint-plugin-import (optional)
+    PRETTIER
+      prettier
+      eslint-config-prettier
+      eslint-plugin-prettier
 
 6 - Add plugins to your editor: [Eslint, Prettier, editorconfig]
 
