@@ -55,21 +55,26 @@ Passos:
   - editor.formatOnSave: true
   - prettier.eslintIntegration: true
   
-  * Optional settings:
-  "prettier.endOfLine": "lf"
-  "prettier.printWidth": 80
-  "prettier.semi": false
-  "eslint.autoFixOnSave": true
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    { "language": "javascript", "autoFix": true },
-    { "language": "javascriptreact", "autoFix": true }
-  ]
-  "files.trimTrailingWhitespace": true
+  Optional settings:
+    {
+      "prettier.endOfLine": "lf"
+      "prettier.printWidth": 80
+      "prettier.semi": false
+      "eslint.autoFixOnSave": true
+      "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        { "language": "javascript", "autoFix": true },
+        { "language": "javascriptreact", "autoFix": true }
+      ]
+      "files.trimTrailingWhitespace": true
+    }
 
 9 - Create and edit .editorconfig on the project root (example at this repo rootDir)
 
-10 - Enable the plugins, eslint and prettier, and check for errors
+10 - Create a .prettierrc to the project root (example at this repo rootDir)
 
-11 - Clean Up the default react app errors and the project is ready to go
+11 - Enable the plugins, eslint and prettier, and check for errors
+  11.1 - Ale => ":ALEFix prettier" on vim (prettier site can teach setup vim)
+
+12 - Clean Up the default react app errors and the project is ready to go
