@@ -2,22 +2,27 @@
 
  Style Guide for React
 
- A set of rules to facilitate the communication between the developer of an react
+ A set of rules to facilitate the communication between developers of an react
 app.
 
-Prettier (extension) to automate the process.
+ Using Prettier to automate the process of formatting and keeping consistence
+through out the code base.
 
-Passos:
+Steps:
 
 1 - $ create-react-app <project-name>
 
 2 - $ cd <project-name>
 
-3 - $ npm install eslint --save-dev
+* You can skip Steps 3 and 4 if you have a ESLint configuration file ready to use
+that you can copy to your project root
 
-4 - $ npx eslint --init
+3 - Create and ESLint Configuration File (.eslintrc.json):
+  $ npx eslint --init 
+  OR
+  $ yarn eslint --init
 
-5 - Choose eslint options:
+4 - Choose eslint options:
   - How would you like to use ESLint? To check syntax, find problems and enforce
   code style
   - What types of modules your project use? JavaScript Modules (import/esport)
@@ -28,7 +33,7 @@ Passos:
   - What format do config file? JSON
   - Whould you like to install dependencies? Yes (if you are using NPM) No (if not)
 
-  5.1(optional) If you are not using, yarn for example:
+  4.1(optional) If you are not using, yarn for example:
     
     You may add prettier as a dev dependency so it can run in other editors without the editor
     plugin dependency.
@@ -46,35 +51,32 @@ Passos:
       eslint-config-prettier
       eslint-plugin-prettier
 
-6 - Add plugins to your editor: [Eslint, Prettier, editorconfig]
+5 - Add plugins to your editor: 
+  VSCode: [Eslint, Prettier, editorconfig]
+  VIM: [Ale, editorconfig-vim]
 
-7? - Edit ESLint config file .eslintrc.json
-  - Add what you want to overwrite from the default from Airbnb
+6 - Edit ESLint config file .eslintrc.json
+  - Add what you want to overwrite from the defaults from Airbnb
 
-8 - Set Editor options:
-  - editor.formatOnSave: true
-  - prettier.eslintIntegration: true
-  
-  Optional settings:
-    {
-      "prettier.endOfLine": "lf"
-      "prettier.printWidth": 80
-      "prettier.semi": false
-      "eslint.autoFixOnSave": true
-      "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        { "language": "javascript", "autoFix": true },
-        { "language": "javascriptreact", "autoFix": true }
-      ]
-      "files.trimTrailingWhitespace": true
-    }
+7 - Set Editor options:
 
-9 - Create and edit .editorconfig on the project root (example at this repo rootDir)
+  VSCode:
+    editor.formatOnSave: true
+    prettier.eslintIntegration: true
 
-10 - Create a .prettierrc to the project root (example at this repo rootDir)
+  Vim (From Prettier Website, :ALEFix):
+    let g:ale_fixers = {
+    \   'javascript': ['prettier', 'eslint'],
+    \   'css': ['prettier'],
+    \}
+    let g:ale_linters = { 'javascript': ['eslint'] }
+    let g:ale_linters_explict = 1
+    let g:ale_fix_on_save = 1
 
-11 - Enable the plugins, eslint and prettier, and check for errors
-  11.1 - Ale => ":ALEFix prettier" on vim (prettier site can teach setup vim)
 
-12 - Clean Up the default react app errors and the project is ready to go
+8 - Create and edit .editorconfig on the project root (example at this repo rootDir)
+
+9 - Create a .prettierrc to the project root (example at this repo rootDir)
+
+10 - Clean Up the default react app errors and the project is ready to go
+
