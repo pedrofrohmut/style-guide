@@ -20,10 +20,12 @@
   "rules": {
     "semi": ["error", "never"],
     "quotes": ["error", "double", { "avoidEscape": true }],
+    "comma-dangle": "off",
     "max-len": ["error", 80, 2],
     "func-names": "off",
     "implicit-arrow-linebreak": "off",
     "no-else-return": "off",
+    "no-unscaped-entities": "off",
     "react/jsx-filename-extension": [
       "error",
       {
